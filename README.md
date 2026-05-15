@@ -1,0 +1,53 @@
+#Build an AI Smart Budget App with Laravel & Livewire | Full-Stack (TALL stack) Tutorial
+## ROTEIRO
+[Iniciando o projeto](https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV)
+
+### INICIANDO O PROJETO
+```sh
+laravel new expense-tracking-app
+[X] Livewire
+[X] Laravel´s built-in authentication
+[ ] Single livewire compoent?
+[X] Pest
+[X] Laravel Boost
+[ ] Run npm?
+
+cd expense-tracking-app
+code .
+ctrl+'
+compos  er require laravel/sail --dev
+```
+#### Configurações iniciais do .env
+```text
+APP_NAME="JCCS FINANÇAS"
+APP_URL=http://localhost
+APP_TIMEZONE=America/Sao_Paulo
+
+DB_CONNECTION=pgsql
+DB_HOST=pgsql
+DB_PORT=5432
+DB_DATABASE=jccs_financas
+DB_USERNAME=sail
+DB_PASSWORD=password
+```
+#### Instalação do sail
+```sh
+php artisan sail:install
+[x] pgsql
+```
+#### Subindo a aplicação para desenvolvimento
+```sh
+sail up -d
+```
+#### Executando as migrações pela primeira vez
+```sh
+sail artisan migrate
+```
+#### Instalanso as dependências do node
+```sh
+sail npm install
+```
+#### Realizando o build dos assets pela primeira vez
+```sh
+sail npm run build
+```
