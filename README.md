@@ -51,3 +51,14 @@ sail npm install
 ```sh
 sail npm run build
 ```
+### INSTALAÇÃO DE PACOTES
+#### Pacote de tradução para pt-BR
+```sh
+sail artisan lang:publish
+sail composer require lucascudo/laravel-pt-br-localization --dev
+sail artisan vendor:publish --tag=laravel-pt-br-localization
+# .env
+APP_LOCALE=pt_BR'
+
+sail artisan optimize
+```
