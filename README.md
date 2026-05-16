@@ -62,3 +62,33 @@ APP_LOCALE=pt_BR'
 
 sail artisan optimize
 ```
+### MÓDULOS
+#### Categorias
+##### Branch
+```sh
+git checkout -b fetaure/categories
+```
+##### Modelo e migrações
+```sh
+sail artisan make:model Category -m
+```
+#### Orçamentos
+##### Branch
+```sh
+git checkuot -b feature/budgets
+```
+##### Modelo e migrações
+```sh
+sail artisan make:model Budget -m
+```
+#### Despesas
+##### Branch
+```sh
+git checkuot -b feature/expenses
+```
+##### Modelo e migrações
+```sh
+sail artisan make:model Expense -m
+```
+
+
