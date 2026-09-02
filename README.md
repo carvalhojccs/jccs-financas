@@ -1,7 +1,10 @@
 #Build an AI Smart Budget App with Laravel & Livewire | Full-Stack (TALL stack) Tutorial
 ## ROTEIRO
 [Iniciando o projeto](https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV)
-
+[Model de Categorias](https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV&t=2562)
+[Model de Orçamentos](https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV&t=2720)
+[Model de Despesas](https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV&t=2962)
+[Gestão de categorias](https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV&t=3397)
 ### INICIANDO O PROJETO
 ```sh
 laravel new expense-tracking-app
@@ -62,6 +65,17 @@ APP_LOCALE=pt_BR'
 
 sail artisan optimize
 ```
+
+### PUBLICAÇÃO DE CONFIGURAÇÕES
+```sh
+sail artisan livewire:publish
+# config/livewire.php
+...
+'make_command' => [
+        'type' => 'mfc'
+...
+```
+
 ### MÓDULOS
 #### Categorias
 ##### Branch
@@ -91,4 +105,19 @@ git checkuot -b feature/expenses
 sail artisan make:model Expense -m
 ```
 
+# CATEGORIES MANAGEMENT
+## Livewire components
+```sh
+sail artisan make:livewire pages::categories.page
+sail artisan make:livewire pages::categories.index
+sail artisan make:livewire pages::categories.create
+sail artisan make:livewire pages::categories.edit
+sail artisan make:livewire pages::categories.preview
+```
+## Rotas
+```php
+Route::livewire('/pages/categories', 'pages::categories.page');
+```
 
+
+https://youtu.be/89dz_wTS1lc?list=PL6XtPqSZnOwSpS8NpJe6PoJArZNJt8RuV&t=7340
